@@ -10,7 +10,6 @@ int main() {
 
     shmid = shmget((key_t)1234, 1024, 0666|IPC_CREAT);
     
-
     cout<<"Id of shared memory is: "<<shmid<<endl;
 
     shared_memory = shmat(shmid, NULL, 0);
