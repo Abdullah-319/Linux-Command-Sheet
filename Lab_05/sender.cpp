@@ -5,10 +5,11 @@ using namespace std;
 
 int main() {
     int shmid;
-    void* shared_memory;
-    cahr input[100];
+    void * shared_memory;
+    char input[100];
 
-    shmid = shmget((key_t)1234, 1024, 0666);
+    shmid = shmget((key_t)1234, 1024, 0666|IPC_CREAT);
+    
 
     cout<<"Id of shared memory is: "<<shmid<<endl;
 
@@ -20,7 +21,7 @@ int main() {
 
     cin.getline(input, 100);
 
-    stcpy(static_cast<char *>(shared_memory), input);
+    strcpy(static_cast<char *>(shared_memory), input);
 
     return 0;
 }

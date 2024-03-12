@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int shmid;
     void * shared_memory;
-    cahr input[100];
+    char input[100];
 
     shmid = shmget((key_t)1234, 1024, 0666);
 
