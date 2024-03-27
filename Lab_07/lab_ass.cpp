@@ -22,7 +22,7 @@ int get_column_sum(int matrix[3][3], int size, int col) {
     return sum;
 }
 
-// calculate the sum of main or trailing diagonal
+// calculate the sum of main and trailing diagonal
 int get_diagonal_sum(int matrix[3][3], int size, bool main_diagonal) {
     int sum = 0;
     for (int i = 0; i < size; ++i) {
