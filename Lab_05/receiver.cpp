@@ -6,7 +6,6 @@ using namespace std;
 int main() {
     int shmid;
     void * shared_memory;
-    char input[100];
 
     shmid = shmget((key_t)1234, 1024, 0666);
 
@@ -18,7 +17,7 @@ int main() {
 
     cout<<"Data received from shared mempory is: " << endl;
 
-    cout<<(char *)shared_memory << endl;
+    cout<<(char*)shared_memory << endl;
 
     return 0;
 }
