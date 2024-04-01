@@ -1,0 +1,13 @@
+Name: Abdullah Ahmad
+Roll No: SP22-BCS-045
+Skills:
+1. Python programming
+2. Data analysis
+3. Machine learning
+4. Web development
+5. Problem solving
+6. Communication
+7. Leadership
+8. Time management
+9. Teamwork
+10. Critical thinking
