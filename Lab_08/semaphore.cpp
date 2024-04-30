@@ -2,10 +2,12 @@
 #include <sys/wait.h>
 #include <bits/stdc++.h>
 #include <pthread.h>
+#include <bits/semaphore.h>
+
 using namespace std;
 
 int a=0;
-
+sem_t s;
 
 void * incA (void *arg){
 	cout<<"Inside incA Thread ..."<<endl;
