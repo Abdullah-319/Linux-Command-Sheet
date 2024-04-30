@@ -34,7 +34,7 @@ void * process_C(void *arg) {
     cout << "Process C executing." << endl;
     // Signal C finished
     sem_post(&s2);
-    sem_post(&s3);
+    sem_post(&s1);
 
     return nullptr;
 }
@@ -45,6 +45,7 @@ void * process_D(void *arg) {
     cout << "Process D executing." << endl;
     // Signal D finished
     sem_post(&s2);
+    sem_post(&s3);
 
     return nullptr;
 }
@@ -54,13 +55,16 @@ void * process_E(void *arg) {
     // Execute process E
     cout << "Process E executing." << endl;
     // Signal E finished
+    sem_post(&s3);
     sem_post(&s4);
 
     return nullptr;
 }
 
 void * process_F(void *arg) {
-    sem_wait(&s4);  // Wait for C or E to finish
+    sem_wait(&s4);
+    sem_wait(&s1);
+    sem_wait(&s3);  // Wait for C or E to finish
     // Execute process F
     cout << "Process F executing." << endl;
 
